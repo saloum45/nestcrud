@@ -5,6 +5,7 @@ import { UserModule } from './user/user.module';
 import { LivreModule } from './livre/livre.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DataSource } from 'typeorm';
+import { User } from './user/entities/user.entity';
 
 @Module({
   imports: [
@@ -15,7 +16,7 @@ import { DataSource } from 'typeorm';
     username: 'root',
     password: '',
     database: 'nestapp',
-    entities: [],
+    entities: [User],
     synchronize: false,
     }),
   UserModule, LivreModule],
